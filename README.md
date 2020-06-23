@@ -1,2 +1,2 @@
-# accordion with Js transitionate with real sounds of accordion
+# accordion with Js that transitionate with real sounds of accordion
 
