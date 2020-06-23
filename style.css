@@ -1,0 +1,82 @@
+*,*::before,*::after{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container .accordion{
+    width:60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.accordion-btn{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+.accordion-btn > button{
+    background-color:whitesmoke;
+    color: black;
+    padding:0;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 20px;
+    padding: 20px;
+}
+.accordion-btn > button:hover{
+    background-color:aqua;
+    cursor: pointer;
+}
+.accordion-content{
+    background-color: darkgrey;
+    margin-top: 0px;
+    padding: 0 5px;
+    max-height: 0;
+    margin-bottom: none;
+    overflow: hidden;
+    transition: max-height 6s ease-out;
+}
+.accordion-btn  + .accordion-content{
+    border: solid;
+    border-image: linear-gradient(to right, #26CC7C, rgba(255, 2, 255, .9), transparent)1;
+}
+
+.accordion-btn::after{
+    content:'\002B';
+    font-style:italic;
+    font-size: 30px;
+    font-weight: 50px;
+    right: 5px;
+    position: absolute;
+    color:rgb(12, 9, 9);
+}
+.accordion-btn.active::after{
+    content:'\2212';   
+}
+
+.accordion-content::after{
+    transition: transform 3s ease-in-out;
+}
